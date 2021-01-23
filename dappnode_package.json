@@ -1,0 +1,41 @@
+{
+  "name": "bitcoin.avado.dnp.dappnode.eth",
+  "version": "10.0.5",
+  "upstream": "v0.21.0",
+  "description": "The Bitcoin Core daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
+  "avatar": "/ipfs/QmRS2feKaRdtzVF51z76C96F9bHHWPRMGDQK8jXzt4uHLD",
+  "type": "service",
+  "author": "AVADO",
+  "autoupdate": true,
+  "title": "Bitcoin node",
+  "image": {
+    "restart": "always",
+    "volumes": [
+      "bitcoin_data:/root/.bitcoin"
+    ],
+    "ports": [
+      "8333:8333",
+      "18332:18332",
+      "18333:18333",
+      "28332:28332",
+      "28333:28333"
+    ],
+    "environment": [
+      "BTC_RPCUSER=avado",
+      "BTC_RPCPASSWORD=avado",
+      "BTC_TXINDEX=1",
+      "BTC_PRUNE=0",
+      "BTC_TESTNET=0"
+    ],
+    "path": "bitcoin.avado.dnp.dappnode.eth_10.0.5.tar.xz",
+    "hash": "/ipfs/QmeZaebJGoz6aLWzemesohNGzS8q3YBJwLzoVS6W73hZSq",
+    "size": 10131632
+  },
+  "contributors": [
+    "AVADO",
+    "Abel Boldú (@vdo)",
+    "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
+    "Loco del Bitcoin <ellocodelbitcoin@gmail.com>"
+  ],
+  "license": "GPL-3.0"
+}
